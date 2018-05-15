@@ -52,6 +52,7 @@ public class PlayerController : MonoBehaviour {
     private Vector2 movementVector;
 	private Animator anim;
 	public bool onLadder = false;
+    
 
 
     private void Awake()
@@ -214,6 +215,9 @@ public class PlayerController : MonoBehaviour {
         {
 			anim.SetBool ("isJumping", false);
 		}
+
+        
+        
     }
 
 	void OnCollisionExit2D(Collision2D _collision)
@@ -227,7 +231,8 @@ public class PlayerController : MonoBehaviour {
 		{
 			isGrounded = false;
 		}
-       
+
+      
     }
 
     private void FixedUpdate()
